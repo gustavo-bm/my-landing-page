@@ -3,7 +3,7 @@ const translations = {
     // Navbar
     'nav.about': 'VONIC',
     'nav.products': 'PRODUCTS',
-    'nav.service': 'SERVICE',
+    'nav.partners': 'PARTNERS',
     'nav.contact': 'CONTACT',
     
     // Hero
@@ -29,7 +29,7 @@ const translations = {
     // Navbar
     'nav.about': 'VONIC',
     'nav.products': 'PRODUTOS',
-    'nav.service': 'SERVIÇOS',
+    'nav.partners': 'PARCEIROS',
     'nav.contact': 'CONTATO',
     
     // Hero

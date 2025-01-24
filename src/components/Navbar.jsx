@@ -132,10 +132,10 @@ function Navbar() {
         </li>
         <li>
           <a 
-            href="#service" 
-            onClick={(e) => handleScroll(e, 'service')}
+            href="#partners" 
+            onClick={(e) => handleScroll(e, 'partners')}
           >
-            {translate('nav.service')}
+            {translate('nav.partners')}
           </a>
         </li>
         <li>
