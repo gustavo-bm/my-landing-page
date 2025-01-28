@@ -5,6 +5,8 @@ const translations = {
     'nav.products': 'PRODUCTS',
     'nav.partners': 'PARTNERS',
     'nav.contact': 'CONTACT',
+    'nav.home': 'HOME',
+    'nav.catalog': 'CATALOG',
     
     // Hero
     'hero.title': 'Developing',
@@ -24,6 +26,12 @@ const translations = {
     'testimonials.globalplast': 'Working with Vonic has been transformative. Their innovative solutions and expert team have significantly improved our manufacturing capabilities.',
     'testimonials.futuretech': 'Vonic\'s commitment to excellence and cutting-edge technology has made them an invaluable partner in our success story.',
     'testimonials.ecomold': 'The energy efficiency and precision of Vonic\'s systems have not only improved our production quality but also reduced our operational costs.',
+    'contact.title': 'Contact Us',
+    'contact.name': 'Your Name',
+    'contact.email': 'Your Email',
+    'contact.phone': 'Phone Number',
+    'contact.message': 'Your Message',
+    'contact.submit': 'Send Message',
   },
   pt: {
     // Navbar
@@ -31,6 +39,8 @@ const translations = {
     'nav.products': 'PRODUTOS',
     'nav.partners': 'PARCEIROS',
     'nav.contact': 'CONTATO',
+    'nav.home': 'HOME',
+    'nav.catalog': 'CATÁLOGO',
     
     // Hero
     'hero.title': 'Desenvolvendo',
@@ -50,6 +60,12 @@ const translations = {
     'testimonials.globalplast': 'Trabalhar com a Vonic tem sido transformador. Suas soluções inovadoras e equipe especializada melhoraram significativamente nossas capacidades de fabricação.',
     'testimonials.futuretech': 'O compromisso da Vonic com a excelência e tecnologia de ponta os tornou um parceiro inestimável em nossa história de sucesso.',
     'testimonials.ecomold': 'A eficiência energética e precisão dos sistemas Vonic não só melhoraram nossa qualidade de produção, mas também reduziram nossos custos operacionais.',
+    'contact.title': 'Contact Us',
+    'contact.name': 'Your Name',
+    'contact.email': 'Your Email',
+    'contact.phone': 'Phone Number',
+    'contact.message': 'Your Message',
+    'contact.submit': 'Send Message',
   }
 };
 

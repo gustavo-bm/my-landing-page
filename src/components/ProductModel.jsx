@@ -1,60 +1,51 @@
+import { memo, useCallback } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
-import { Suspense } from 'react';
 
-function Box() {
+const Model = memo(({ modelType }) => {
+  const getGeometry = useCallback(() => {
+    switch (modelType) {
+      case 'box':
+        return <boxGeometry args={[2, 2, 2]} />;
+      case 'cylinder':
+        return <cylinderGeometry args={[1, 1, 2, 16]} />;
+      case 'sphere':
+        return <sphereGeometry args={[1.2, 16, 16]} />;
+      default:
+        return <boxGeometry args={[2, 2, 2]} />;
+    }
+  }, [modelType]);
+
   return (
     <mesh>
-      <boxGeometry args={[2, 2, 2]} />
-      <meshStandardMaterial color="#e31837" />
+      {getGeometry()}
+      <meshStandardMaterial color="#CF171F" />
     </mesh>
   );
-}
-
-function Cylinder() {
-  return (
-    <mesh>
-      <cylinderGeometry args={[1, 1, 2, 32]} />
-      <meshStandardMaterial color="#1a1a1a" metalness={0.8} roughness={0.2} />
-    </mesh>
-  );
-}
-
-function Sphere() {
-  return (
-    <mesh>
-      <sphereGeometry args={[1.2, 32, 32]} />
-      <meshStandardMaterial color="#2b49a3" metalness={0.5} roughness={0.3} />
-    </mesh>
-  );
-}
-
-const models = {
-  box: Box,
-  cylinder: Cylinder,
-  sphere: Sphere,
-};
+});
 
 function ProductModel({ modelType = 'box' }) {
-  const Model = models[modelType] || Box;
-
   return (
     <div className="product-model">
-      <Canvas shadows dpr={[1, 2]} camera={{ fov: 45 }}>
-        <Suspense fallback={null}>
-          <Stage environment="city" intensity={0.6}>
-            <Model />
-          </Stage>
-        </Suspense>
+      <Canvas
+        shadows={false}
+        dpr={[1, 2]}
+        camera={{ fov: 45 }}
+        performance={{ min: 0.5 }}
+      >
+        <Stage environment="city" intensity={0.6}>
+          <Model modelType={modelType} />
+        </Stage>
         <OrbitControls 
           autoRotate
           enableZoom={false}
           maxPolarAngle={Math.PI / 2}
           minPolarAngle={Math.PI / 2}
+          enableDamping={false}
         />
       </Canvas>
     </div>
   );
 }
 
-export default ProductModel; 
+export default memo(ProductModel); 

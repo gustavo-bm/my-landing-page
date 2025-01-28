@@ -1,6 +1,7 @@
 import { useTranslation } from '../context/LanguageContext';
 import { useState } from 'react';
 import logoVonic from '../assets/logovonic.png';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const { translate, changeLanguage, currentLanguage } = useTranslation();
@@ -145,6 +146,11 @@ function Navbar() {
           >
             {translate('nav.contact')}
           </a>
+        </li>
+        <li>
+          <Link to="/catalog">
+            {translate('nav.catalog')}
+          </Link>
         </li>
       </ul>
 
